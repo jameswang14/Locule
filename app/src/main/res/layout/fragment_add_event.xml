@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rel_layout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity" >
+
+
+        
+        <ScrollView
+            android:id="@+id/scroll_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+             >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".2"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title" />
+
+                    <EditText
+                        android:id="@+id/eventName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPostalAddress" >
+
+                        <requestFocus/>
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".2"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description" />
+
+                    <EditText
+                        android:id="@+id/eventDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPostalAddress" >
+                    </EditText>
+                </LinearLayout>
+		<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".2"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/address" />
+
+                    <EditText
+                        android:id="@+id/eventAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPostalAddress" >
+
+
+                    </EditText>
+                    </LinearLayout>
+
+		<DatePicker
+		    android:id="@+id/datePicker"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" />
+                
+    		<TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    		            <Button
+    		                android:id="@+id/addEventBtn"
+    		                android:layout_width="wrap_content"
+    		                android:layout_height="wrap_content"
+    		                android:layout_gravity="center_horizontal"
+    		                android:background="#5ce6e6"
+    		                android:gravity="center"
+    		                android:text="@string/confirm"
+    		                 />
+            </LinearLayout>
+
+                
+        </ScrollView>
+
+   
+
+
+</RelativeLayout>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.locule"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk tools:node="replace" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <!-- Required to show current location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- Required OpenGL ES 2.0. for Maps V2 -->
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <application android:uiOptions="splitActionBarWhenNarrow"
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" >
+        </meta-data>
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyBVfrAKaDoZw96DsECnOXh5aPj1AJB5WMc" />
+		<uses-library android:name="com.google.android.maps" />
+        <activity
+            android:name="com.example.locule.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.locule.AddEventActivity"
+            android:label="@string/title_add_event_activity" >
+        </activity>
+        <activity
+            android:name="com.example.locule.MapActivity"
+            android:label="@string/title_activity_map" >
+        </activity>
+        <activity
+            android:name="com.example.locule.SwitchMap"
+            android:label="@string/title_activity_switch_map" >
+        </activity>
+        <activity
+            android:name="com.example.locule.SwitchSchedule"
+            android:label="@string/title_activity_switch_schedule" >
+        </activity>
+    </application>
+
+</manifest>

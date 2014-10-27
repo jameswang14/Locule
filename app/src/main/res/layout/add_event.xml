@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:weightSum="1.0" >
+
+        
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".9" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".2"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/title" />
+
+                    <EditText
+                        android:id="@+id/eventName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPostalAddress" >
+
+                        <requestFocus />
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".2"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/description" />
+
+                    <EditText
+                        android:id="@+id/eventDescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPostalAddress" >
+                    </EditText>
+                </LinearLayout>
+		<LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight=".2"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/address" />
+
+                    <EditText
+                        android:id="@+id/eventAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:ems="10"
+                        android:inputType="textPostalAddress" >
+
+
+                    </EditText>
+                    </LinearLayout>
+
+		<DatePicker
+		    android:id="@+id/datePicker"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content" />
+                
+    		<TimePicker
+        android:id="@+id/timePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    		            <Button
+    		                android:id="@+id/addEventBtn"
+    		                android:layout_width="wrap_content"
+    		                android:layout_height="wrap_content"
+    		                android:layout_gravity="center_horizontal"
+    		                android:background="#5ce6e6"
+    		                android:gravity="center"
+    		                android:text="@string/confirm"
+    		                android:onClick="addEvent" />
+            </LinearLayout>
+
+                
+        </ScrollView>
+
+   <LinearLayout
+        android:id="@+id/footer"
+        android:layout_weight=".1"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:background="#66ffff"
+        android:weightSum="1.0">
+
+        <Button
+            android:id="@+id/Schedule"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight = ".2"
+            android:text="@string/schedule_view"
+            android:background="#5ce6e6"
+            android:onClick="switchMain" />
+		<View
+		    android:layout_width="1dp"
+		    android:layout_height="fill_parent"
+		    android:background="#FFFFFF"/>
+
+        <TextView
+            android:id="@+id/Timer"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".6"
+            android:gravity="center"
+            android:text="@string/app_name"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+		<View
+		    android:layout_width="1dp"
+		    android:layout_height="fill_parent"
+		    android:background="#FFFFFF"/>
+        <Button
+            android:id="@+id/Map"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight=".2"
+            android:text="@string/map_view" 
+            android:background="#5ce6e6" 
+            android:onClick="switchMap"/>
+
+        
+    </LinearLayout>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
