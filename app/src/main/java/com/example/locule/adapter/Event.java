@@ -41,7 +41,7 @@ public class Event implements RoutingListener {
 		_description = desc;
 		_address = address;
 		dateTime = new GregorianCalendar(year, month, day, hour, min);
-        proccessLength();
+        //proccessLength();
 	}
 	public Event(String name, String desc, String address, int year, int month, int day, int hour, int min, Context context){
         _context = context;
@@ -49,7 +49,7 @@ public class Event implements RoutingListener {
 		_description = desc;
 		_address = address;
 		dateTime = new GregorianCalendar(year, month, day, hour, min);
-        proccessLength();
+        //proccessLength();
 	}
 	public Event(int i, String name, String desc, String Address, Date d, Context context){
         _context = context;
@@ -59,7 +59,7 @@ public class Event implements RoutingListener {
 		_address = Address;
 		dateTime = new GregorianCalendar();
         dateTime.setTime(d);
-        proccessLength();
+        //proccessLength();
 	}
 	public Event(String name, String desc, String Address, Date d, Context context){
         _context = context;
@@ -68,7 +68,7 @@ public class Event implements RoutingListener {
 		_address = Address;
 		dateTime = new GregorianCalendar();
         dateTime.setTime(d);
-        proccessLength();
+        //proccessLength();
 	}
 	public long getID(){
 		return id;

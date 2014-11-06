@@ -53,8 +53,7 @@ public class HomeFragment extends ListFragment {
             Bundle savedInstanceState) {
 		
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-        
-     
+
         
         return rootView;
     }
@@ -62,7 +61,9 @@ public class HomeFragment extends ListFragment {
 	{
 		super.onActivityCreated(savedInstanceState);
 
-
+        List<Event> l = db.getAllEvents();
+        for(Event e: l)
+            e.proccessLength();
 		listView = getListView();
         listView.setAdapter(mAdapter);
         listView.setOnItemClickListener(new OnItemClickListener() {
